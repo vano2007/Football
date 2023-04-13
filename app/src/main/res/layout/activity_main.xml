@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
     <com.stelladk.arclib.ArcLayout
+        android:id="@+id/arcLayout"
         android:layout_width="380dp"
         android:layout_height="650dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/football_field"
         app:ArcRadius="60dp"
-        app:BottomRightArc="inner"
         app:BottomLeftArc="inner"
+        app:BottomRightArc="inner"
         app:TopLeftArc="inner"
         app:TopRightArc="inner"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,4 +23,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/ball"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="250dp"
+        android:src="@drawable/ball"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
